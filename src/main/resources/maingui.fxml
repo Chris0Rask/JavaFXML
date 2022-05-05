@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.MainguiController">
+   <children>
+      <Label prefHeight="18.0" prefWidth="170.0" text="Please enter information" />
+      <FlowPane alignment="TOP_CENTER" prefHeight="200.0" prefWidth="200.0">
+         <children>
+            <Label prefHeight="18.0" prefWidth="54.0" text="Username" />
+            <TextField fx:id="uNameField" />
+            <Label prefHeight="18.0" prefWidth="57.0" text="Password" />
+            <PasswordField fx:id="pWordField" />
+            <Label prefHeight="18.0" prefWidth="68.0" text="Full Name" />
+            <TextField fx:id="fNameField" />
+            <Label prefHeight="18.0" prefWidth="56.0" text="Address" />
+            <TextField fx:id="addressField" />
+            <FlowPane alignment="TOP_CENTER" prefHeight="200.0" prefWidth="200.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#signup" text="Signup" />
+                  <Button mnemonicParsing="false" onAction="#back" text="Back" />
+               </children>
+            </FlowPane>
+         </children>
+      </FlowPane>
+   </children>
+</FlowPane>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<FlowPane alignment="BOTTOM_CENTER" orientation="VERTICAL" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.DeleteController">
+    <Label text="Username" />
+    <TextField fx:id="userNamed" />
+    <Label text="Password" />
+    <PasswordField fx:id="passWordd" />
+    <FlowPane prefHeight="200.0" prefWidth="200.0">
+        <children>
+            <Button onAction="#delU" text="Delete" />
+            <Button mnemonicParsing="false" onAction="#back" text="Back" />
+            <Button mnemonicParsing="false" onAction="#show" text="Show" />
+        </children>
+    </FlowPane>
+</FlowPane>

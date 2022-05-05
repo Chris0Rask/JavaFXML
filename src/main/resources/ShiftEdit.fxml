@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.ShiftEditController">
+   <children>
+      <ListView fx:id="ListofShifts" layoutX="386.0" layoutY="59.0" prefHeight="200.0" prefWidth="200.0" />
+      <Label layoutX="467.0" layoutY="36.0" prefHeight="18.0" prefWidth="38.0" text="Shifts" />
+      <TextField layoutX="173.0" layoutY="46.0" />
+      <TextField layoutX="173.0" layoutY="102.0" />
+      <TextField layoutX="173.0" layoutY="159.0" />
+      <TextField layoutX="173.0" layoutY="225.0" />
+      <Button layoutX="173.0" layoutY="272.0" mnemonicParsing="false" text="Create" />
+      <Button layoutX="526.0" layoutY="259.0" mnemonicParsing="false" text="Remove" />
+      <Button layoutX="280.0" layoutY="272.0" mnemonicParsing="false" onAction="#back" text="Back" />
+      <Label layoutX="14.0" layoutY="-10.0" prefHeight="75.0" prefWidth="140.0" text="Shift Editor" />
+      <Label layoutX="221.0" layoutY="28.0" text="Username" />
+      <Label layoutX="232.0" layoutY="84.0" text="Stand" />
+      <Label layoutX="224.0" layoutY="141.0" text="Function" />
+      <Label layoutX="234.0" layoutY="207.0" text="Time" />
+   </children>
+</AnchorPane>
