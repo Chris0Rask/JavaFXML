@@ -9,8 +9,9 @@ import java.io.IOException;
 
 public class FXMLApp extends Application {
     private  DataController dataController = new DataController();
-    private AppState state = dataController.loadState();
+    private AppState state =new AppState(); //dataController.loadState();
     private Stage stage;
+    public static String currentUser;
 
 
     public static void run(){
@@ -73,6 +74,8 @@ public class FXMLApp extends Application {
         Scene scene = new Scene(flowPane);
         stage.setScene(scene);
         stage.show();
+
+
     }
 
     public void deleteUser()throws IOException{
@@ -117,10 +120,12 @@ public class FXMLApp extends Application {
                 new FXMLLoader(getClass().getResource("/ShiftEdit.fxml"));
         AnchorPane anchorPane=loader.load();
         ShiftEditController ctrl =loader.getController();
+
         ctrl.setMaincontroller(this);
         Scene scene=new Scene(anchorPane);
         stage.setScene(scene);
         stage.show();
     }
+
 
 }

@@ -6,6 +6,8 @@ import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
 import java.io.IOException;
 
+import static control.FXMLApp.currentUser;
+
 public class GuiController {
     public TextField userName;
     public PasswordField passWord;
@@ -25,13 +27,19 @@ public class GuiController {
         ArrayList<User> myUser = (ArrayList<User>) state.getUsers();
         for (User user: myUser){
             if (user.userName.equals(this.userName.getText()) && user.passWord.equals(this.passWord.getText())){
+                FXMLApp.currentUser=this.userName.getText();
+
+
                 mainctrontroller.Log();
+
+
             }
         }
 
     }
     public void adminD(ActionEvent actionEvent)throws IOException{
         mainctrontroller.adminLogin();
+
 
     }
 

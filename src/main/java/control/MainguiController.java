@@ -8,7 +8,7 @@ import java.util.ArrayList;
 
 public class MainguiController {
     private  DataController dataController = new DataController();
-    private AppState state = dataController.loadState();//new Appstate;
+    private AppState state =dataController.loadState();//new AppState();
 
     public TextField uNameField;
     public PasswordField pWordField;
@@ -28,26 +28,32 @@ public class MainguiController {
 
 
     public void signup(ActionEvent actionEvent){
+        Boolean myFlag = false;
+
+
         ArrayList<User> myUser = (ArrayList<User>) state.getUsers();
         for (User user: myUser){
-            if (user.userName.equals(this.userName.getText()) && user.passWord.equals(this.passWord.getText())){
-
+            if (user.userName.equals(this.uNameField.getText())){
+                myFlag = true;
             }
         }
-        User user = new User();
-        user.userName= uNameField.getText();
-        user.passWord= pWordField.getText();
-        user.name= fNameField.getText();
-        user.address= addressField.getText();
-
-        state.getUsers().add(user);
-        dataController.saveAppState(state);
-        System.out.println(uNameField.getText());
-        System.out.println(user.userName);
-        System.out.println(this.state.getUsers().size());
-        app.back();
+        if (!myFlag) {
 
 
+            User user = new User();
+            user.userName = uNameField.getText();
+            user.passWord = pWordField.getText();
+            user.name = fNameField.getText();
+            user.address = addressField.getText();
+
+            state.getUsers().add(user);
+            dataController.saveAppState(state);
+            System.out.println(uNameField.getText());
+            System.out.println(user.userName);
+            System.out.println(this.state.getUsers().size());
+            app.back();
+
+        }
     }
 
 
