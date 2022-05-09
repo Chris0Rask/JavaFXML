@@ -9,7 +9,7 @@ import java.io.IOException;
 
 public class FXMLApp extends Application {
     private  DataController dataController = new DataController();
-    private AppState state =new AppState(); //dataController.loadState();
+    private AppState state =dataController.loadState();
     private Stage stage;
     public static String currentUser;
 
@@ -23,6 +23,7 @@ public class FXMLApp extends Application {
         this.stage=stage;
         FXMLLoader loader=
                 new FXMLLoader(getClass().getResource("/GUI.fxml"));
+
         FlowPane flowPane=loader.load();
         GuiController ctrl =loader.getController();
                 ctrl.setMaincontroller(this);
